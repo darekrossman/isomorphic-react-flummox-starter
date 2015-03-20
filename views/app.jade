@@ -1,0 +1,22 @@
+doctype html
+html(class='no-js')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title=title
+
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')   
+
+    link(rel="icon", type="image/png", sizes="32x32", href="#{appContext}/favicon.png")
+
+    link(href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", href="#{appContext}/dist/style.css")
+
+  body
+    #app!=appString
+    
+  script window.__CONFIG__ = !{appConfig}
+
+  script(src="#{jsBundleSrc}", defer)
